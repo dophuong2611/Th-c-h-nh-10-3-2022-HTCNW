@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            background-image: url(../img/5.jpg);
+        }
+
+        .wrapper {
+            height: 800px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+
+        nav {
+            height: 50px;
+            width: 1089px;
+            line-height: 50px;
+            background-color: rgb(15, 185, 15);
+        }
+
+        header {
+            height: 150px;
+            width: 1089px;
+            background-image: url(../img/1.jpg);
+            text-align: center;
+            line-height: 150px;
+            font-size: 100px;
+            color: orange;
+            text-shadow: 0 0 10px red;
+        }
+
+        .content {
+            height: 400px;
+            width: 1089px;
+            background-color: burlywood;
+        }
+
+        aside {
+            height: 400px;
+            width: 400px;
+            background-color: crimson;
+            float: left;
+        }
+
+        section {
+            height: 400px;
+            width: 689px;
+            background-color: coral;
+            float: left;
+        }
+
+        .menu li {
+            float: left;
+            height: 50px;
+            width: 150px;
+            line-height: 50px;
+            list-style: none;
+            text-align: 20px;
+            background-color: aquamarine;
+            position: relative;
+        }
+
+        a {
+            color: teal;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .menu li:hover {
+            background-color: gray;
+        }
+
+        li:hover > a {
+            color: blue;
+            font-style: italic;
+        }
+
+        .menu li:hover .sunmenu {
+            display: none;
+            position: absolute;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        nav span form #txtEmail {
+            padding: 3px;
+            color: blue;
+        }
+
+        nav span form #btnGO {
+            padding: 3px;
+            color: blueviolet;
+            border-radius: 50%;
+            text-shadow: 0 0 10px red;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="https://iuh.edu.vn">HOME</a></li>
+                <li><a href="">SERVICE</a></li>
+                <li><a href="">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">PHONE</a></li>
+                        <li><a href="">INTERNET</a></li>
+                        <li><a href="">TIVI</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <span>
+                <form action="dangky.php">
+                    <label for="lblEmail">Email:</label>
+                    <input type="Email" name="txtEmail" id="txtEmail" required placeholder="Nhap Email"> 
+                    <input type="submit" value="GO" id="btnGO">
+                </form>
+            </span>
+        </nav>
+        <header>TOI YEU VIET NAM</header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h5 style="position: absolute; font-weight: bolid; color:white; text-shadow: 10px 20px 20px violet;">GAME SHOW</h5>
+                    <img src="../img/2.jpg" alt="">
+                </article>
+                <article>
+                    <h5>HOAT DONG 2</h5>
+                    <img src="../img/3.jpg" alt="">
+                </article>
+                <article>
+                    <h5>HOAT DONG 3</h5>
+                    <img src="../img/4.jpg" alt="">
+                </article>
+            </aside>
+            <section>
+                <form action="dangky.php">
+                    <fieldset>
+                        <legend>Thong tin cua ban</legend>
+                        <label for="HoTen">HoTen</label>
+                        <input type="text" name="txtHT" id="txtHT" required placeholder="Nhap Ho Ten"> <br/>
+                        <label for="Email">Email</label>
+                        <input type="email" name="txtEmail" id="txtEmail" required placeholder="Nhap Email"> <br/>
+                        <input type="radio" name="radNam" id="radNam" value="nam" checked> <label for="Nam">Nam</label>
+                        <input type="radio" name="radNu" id="radNu" value="nu" checked> <label for="Nu">Nu</label>
+                        <input type="submit" value="GO" id="btnGO">
+                    </fieldset>
+                </form>
+            </section>
+
+        </div>
+    </div>
+</body>
+</html>
